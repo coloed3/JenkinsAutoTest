@@ -4,7 +4,7 @@ node {
         checkout scm
     }
     stage('Build image'){
-        app = docker.build('coloed3/nodeapp')
+        app = docker.build('.')
     }
     stage('Test image'){
         app.inside{
